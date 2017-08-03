@@ -57,5 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
-# vs code workspace settings
-.vscode/
+# secrets
+keys.js
