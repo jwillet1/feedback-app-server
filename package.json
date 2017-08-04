@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "dev": "nodemon index.js"
   },
   "author": "Joshua Willett",
   "license": "ISC",
@@ -23,6 +23,7 @@
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-react": "^7.1.0",
+    "nodemon": "^1.11.0"
   }
 }
