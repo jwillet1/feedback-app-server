@@ -20,4 +20,4 @@ ReactDOM.render(
 );
 
 console.log('STRIPE KEY IS ', process.env.REACT_APP_STRIPE_KEY);
-serviceWorkerRegistration.unregister();
+registerServiceWorker.unregister();
