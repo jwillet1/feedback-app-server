@@ -8,8 +8,6 @@ import reduxThunk from 'redux-thunk';
 import App from './components/App.js';
 import reducers from './reducers';
 
-import { unregister } from './registerServiceWorker';
-
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
@@ -20,4 +18,3 @@ ReactDOM.render(
 );
 
 console.log('STRIPE KEY IS ', process.env.REACT_APP_STRIPE_KEY);
-unregister();
