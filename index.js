@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 
 require('./models/user');
+require('./models/survey');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
@@ -25,6 +26,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes.js')(app);
 require('./routes/billingRoutes.js')(app);
+require('./routes/surveyRoutes.js')(app);
 
 if (process.env.NODE_ENV === 'production') {
   // Express will serve up production assets
@@ -39,7 +41,8 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
+const PORT = 8081;
 app.listen(PORT, () => {
   console.log('Express app running on port: ' + PORT);
 });
