@@ -47,7 +47,7 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = ({auth}) => ({
+const mapStateToProps = ({ auth }) => ({
   auth,
 });
 

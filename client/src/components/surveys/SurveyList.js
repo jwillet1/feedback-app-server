@@ -6,13 +6,15 @@ class SurveyList extends Component {
   componentDidMount() {
     this.props.fetchSurveys();
   }
-  
+
   renderSurveys() {
     return this.props.surveys.reverse().map(survey => {
       return (
         <div className="card darken-1" key={survey._id}>
           <div className="card-content">
-            <span className="card-title">{survey.title}</span>
+            <span className="card-title">
+              {survey.title}
+            </span>
             <p>
               {survey.body}
             </p>
@@ -21,14 +23,18 @@ class SurveyList extends Component {
             </p>
           </div>
           <div className="card-action">
-            <a>Yes: {survey.yes}</a>
-            <a>No: {survey.no}</a>
+            <a>
+              Yes: {survey.yes}
+            </a>
+            <a>
+              No: {survey.no}
+            </a>
           </div>
         </div>
       );
     });
   }
-  
+
   render() {
     return (
       <div>
@@ -38,7 +44,7 @@ class SurveyList extends Component {
   }
 }
 
-const mapStateToProps = ({surveys}) => ({
+const mapStateToProps = ({ surveys }) => ({
   surveys,
 });
 
